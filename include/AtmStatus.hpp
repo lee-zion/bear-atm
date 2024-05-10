@@ -1,0 +1,13 @@
+#ifndef BEARATM_ATMSTATUS_H
+#define BEARATM_ATMSTATUS_H
+
+enum AtmStatus {
+  OK = 0,
+  ERR_CARD,
+  ERR_CONTROLLER,
+  ERR_CARDREADER,
+  ERR_BANK,
+  ERR_CASHBIN
+};
+
+#endif
