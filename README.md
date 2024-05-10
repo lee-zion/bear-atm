@@ -27,7 +27,5 @@ cd bear-atm
 - Run the following command in the root directory of project
 
 ```bash
-git clone https://github.com/lee-zion/bear-atm.git
-cd bear-atm
-
+./test_project.sh
 ```
