@@ -9,11 +9,11 @@
 
 class CardReaderWrapper {
  public:
-  CardReaderWrapper(CardReader* cardReader);
-  AtmStatus GetCardVendorID(Card* card, uint64_t& card_vendor_id);
+  CardReaderWrapper(CardReader *cardReader);
+  AtmStatus GetCardVendorID(Card *card, uint64_t& card_vendor_id);
 
  private:
-  CardReader* cardReader_;
+  CardReader *cardReader_;
 };
 
 #endif  // BEARATM_CARDREADERWRAPPER_H

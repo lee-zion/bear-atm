@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
 #include "Card.hpp"
-#include "CardVendorWrapper.hpp"
 #include "CardVendor.hpp"
+#include "CardVendorWrapper.hpp"
 
 TEST(CardVendorWrapperTest, GetBankList) {
     Card *card1 = new Card(1);
