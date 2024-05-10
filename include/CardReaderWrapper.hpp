@@ -10,7 +10,7 @@
 class CardReaderWrapper {
  public:
   CardReaderWrapper(CardReader* cardReader);
-  AtmStatus GetCardVendorID(uint64_t card_id, uint64_t& card_vendor_id);
+  AtmStatus GetCardVendorID(Card* card, uint64_t& card_vendor_id);
 
  private:
   CardReader* cardReader_;

@@ -12,7 +12,7 @@ class CardReader {
   CardReader(std::string vendor);
   uint64_t GetCardID(Card* card);
   uint64_t GetAccountID(Card* card);
-  uint64_t CardReader::GetCardVendorID(Card* card);
+  uint64_t GetCardVendorID(Card* card);
 
  private:
   std::string vendor_;

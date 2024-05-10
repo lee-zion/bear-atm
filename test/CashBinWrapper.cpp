@@ -1,8 +1,7 @@
 #include "gtest/gtest.h"
-#include "CashBin.hpp"
 #include "CashBinWrapper.hpp"
 
-TEST(CardVendorWrapperTest, GetBankList) {
+TEST(CardBinWrapperTest, WithdrawCash) {
     CashBin *cashBin = new CashBin("bin_maker", 100);
     CashBinWrapper *cashBinWrapper = new CashBinWrapper(cashBin);
 

@@ -13,17 +13,27 @@ std::vector<int> CardVendor::GetBankList(Card* card) {
   }
 }
 
-bool CardVendor::ValidatePIN(Card* card) {
+bool CardVendor::ValidatePIN(Card* card, std::string pin) {
+  // PIN is always 000000
+  return pin == "000000";
+}
+
+bool CardVendor::ValidatePINConsole(Card* card) {
   // only 6 digit of userID is set to PIN
-  // if userID is
+  // if userID is longer than 6 digits, trim 6 digits from right
+  // if userID is shorter than 6 digits, pad 0's from left
   uint64_t input;
-  std::cout << "Enter PIN: ";
+  auto userID = card->GetCardID();
+  std::cout << "if cardID is longer than 6 digits, trim 6 digits from right" << std::endl;
+  std::cout << "if cardID is shorter than 6 digits, pad 0's from left" << std::endl;
+  std::cout << "Example) cardID = 1 , then PIN = 000001 ";
+  std::cout << "current cardID: " << userID << std::endl;
+  std::cout << "Enter PIN: " << userID << std::endl;
   std::cin >> input;
 
-  auto user_id = card->GetCardID();
-  user_id = user_id % 1000000;
+  userID = userID % 1000000;
   input = input % 1000000;
-  return input == user_id;
+  return input == userID;
 }
 
 void CardVendor::SetCardToBanksMap(

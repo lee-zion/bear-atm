@@ -6,7 +6,7 @@ uint64_t CardReader::GetCardID(Card* card) {
     return card->GetCardID();
 }
 
-uint64_t CardReader::GetCardID(Card* card) {
+uint64_t CardReader::GetAccountID(Card* card) {
     return card->GetAccountID();
 }
 

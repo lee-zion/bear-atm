@@ -7,3 +7,4 @@ bool CashBin::WithdrawCash(int amount) {
   if (this->balance_ < amount) return false;
   this->balance_ -= amount;
   return true;
+}

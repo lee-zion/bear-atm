@@ -11,7 +11,8 @@ class CardVendorWrapper {
  public:
     CardVendorWrapper(CardVendor* cardVendor);
     AtmStatus GetBankList(Card* card, std::vector<int>& bankList);
-    AtmStatus ValidatePIN(Card* card);
+    AtmStatus ValidatePIN(Card* card, std::string pin);
+    AtmStatus ValidatePINConsole(Card* card);
 
  private:
     CardVendor* cardVendor_;

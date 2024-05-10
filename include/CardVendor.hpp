@@ -12,7 +12,8 @@ class CardVendor {
  public:
   CardVendor(const std::string& name);
   std::vector<int> GetBankList(Card* card);
-  bool ValidatePIN(Card* card);
+  bool ValidatePIN(Card* card, std::string pin);
+  bool ValidatePINConsole(Card* card);
   void SetCardToBanksMap(
       const std::unordered_map<uint64_t, std::vector<int>>& map);
 
