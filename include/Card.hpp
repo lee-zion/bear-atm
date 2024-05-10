@@ -9,11 +9,13 @@
 class Card {
  public:
   Card(uint64_t id);
-  uint64_t GetCardID();
+  uint64_t GetCardID() const;
+  uint64_t GetAccountID() const;
   std::vector<uint64_t> GetBankIDs();
 
  private:
   uint64_t id_;
+  uint64_t account_id_;
   std::vector<uint64_t> bankIDs_;
 };
 

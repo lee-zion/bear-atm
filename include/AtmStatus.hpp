@@ -7,7 +7,8 @@ enum AtmStatus {
   ERR_CONTROLLER,
   ERR_CARDREADER,
   ERR_BANK,
-  ERR_CASHBIN
+  ERR_CASHBIN,
+  ERR_PIN
 };
 
 #endif

@@ -4,21 +4,20 @@
 #include "CardVendor.hpp"
 
 TEST(CardVendorWrapperTest, GetBankList) {
-    Card card1(1);
-    uint64_t card1ID = card1.GetCardID();
+    Card *card1 = new Card(1);
 
-    CardVendor cardVendor("nice");
-    CardVendorWrapper cardVendorWrapper(&cardVendor);
+    CardVendor *cardVendor = new CardVendor("nice");
+    CardVendorWrapper *cardVendorWrapper = new CardVendorWrapper(cardVendor);
 
     std::unordered_map<uint64_t, std::vector<int>> sampleData = {
         {1, {1}},
         {2, {4, 5, 6}},
         {3, {7, 8, 9}}
     };
-    cardVendor.SetCardToBanksMap(sampleData);
+    cardVendor->SetCardToBanksMap(sampleData);
 
     std::vector<int> bankList;
-    AtmStatus status = cardVendorWrapper.GetBankList(card1ID, bankList);
+    AtmStatus status = cardVendorWrapper->GetBankList(card1, bankList);
 
     ASSERT_EQ(status, OK);
 
